@@ -1,21 +1,33 @@
 # See config properties here https://alacritty.org/config-alacritty.html
-live_config_reload=true
+live_config_reload = true
 
 [window]
-dimensions={columns=100, lines=50}
-position={x=0, y=0}
-padding={x=10, y=10}
-dynamic_padding=true
-decorations="None"
-opacity=0.9
+dynamic_padding = true
+decorations = "None"
+opacity = 0.9
 # works only on wayland and macos
-blur=true
-startup_mode="Windowed"
-title="Alacirtty Terminal"
-dynamic_title=true
-class={instance="alacritty", general="Alacritty"}
-decorations_theme_variant="Dark"
-resize_increments=false
+blur = true
+startup_mode = "Windowed"
+title = "Alacirtty Terminal"
+dynamic_title = true
+decorations_theme_variant = "Dark"
+resize_increments = false
+
+[window.dimensions]
+columns = 100
+lines = 50
+
+[window.padding]
+x = 10
+y = 10
+
+[window.position]
+x = 0
+y = 0
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
 
 [scrolling]
 history = 5000
