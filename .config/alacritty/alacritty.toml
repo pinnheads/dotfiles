@@ -72,3 +72,18 @@ mods = "Control|Shift"
 action = "Copy"
 key = "C"
 mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Quit"
+key = "Q"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "N"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Minimize"
+key = "M"
+mods = "Control|Shift"
