@@ -14,8 +14,9 @@ _darcs
 \.git
 \.gitignore
 
-\scripts
-\images
+/scripts
+/images
+/*.stow
 
 .+~          # emacs backup files
 \#.*\#       # emacs autosave files

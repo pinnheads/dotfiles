@@ -1,10 +1,11 @@
 # See config properties here https://alacritty.org/config-alacritty.html
 live_config_reload = true
+import = ["/home/pinnheads/.config/alacritty/dracula.toml"]
 
 [window]
 dynamic_padding = true
 decorations = "None"
-opacity = 0.9
+opacity = 0.6
 # works only on wayland and macos
 blur = true
 startup_mode = "Windowed"

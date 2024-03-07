@@ -1,3 +1,4 @@
 # Excluded files
 .fonts
 *.swp
+.tmux/plugins/*
