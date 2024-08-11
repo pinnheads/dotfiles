@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+if [[ -z $STOW_FOLDERS ]]; then
+  echo "STOW_FOLDERS is not set"
+  STOW_FOLDERS="zsh" # add more folders separated by comma
+fi
+
+if [[ -z $DOTFILES ]]; then
+    echo "DOTFILES is not set"
+    DOTFILES=$HOME/dotfiles
+fi
+
+STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
