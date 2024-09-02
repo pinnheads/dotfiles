@@ -1,0 +1,11 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
+PERSONAL=$XDG_CONFIG_HOME/personal
+source $PERSONAL/env
+
+export DOTFILES=$HOME/.dotfiles
+
+addToPathFront $HOME/.local/scripts
+
+# Where should I put you?
+bindkey -s ^f "tmux-sessionizer\n"
