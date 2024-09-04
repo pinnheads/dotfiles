@@ -3,7 +3,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 PERSONAL=$XDG_CONFIG_HOME/personal
 source $PERSONAL/env
 
-export DOTFILES=$HOME/.dotfiles
+export DOTFILES=$HOME/dotfiles
 
 addToPathFront $HOME/.local/scripts
 
