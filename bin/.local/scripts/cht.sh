@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 languages=$(echo "golang java c cpp python javascript typescript rust html css sass" | tr " " "\n")
-core_utils=$(echo "find xargs awk sed grep vim mkdir tmux" | tr " " "\n")
+core_utils=$(echo "find xargs awk sed grep vim mkdir tmux git" | tr " " "\n")
 selected=$(echo "$languages\n$core_utils" | fzf)
 
 read -p "Enter search query: " query
