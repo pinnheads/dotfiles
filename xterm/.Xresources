@@ -1,0 +1,9 @@
+xterm*utf8: 1
+xterm*faceName: JetBrainsMono Nerd Font:size=12
+xterm*faceNameDoublesize: JetBrainsMono NerdFont:size=10
+xterm*background: black
+xterm*foreground: white
+xterm*utf8Title: true
+xterm*boldMode: false
+XTerm*scrollBar:   off
+XTerm*saveLines:   5000

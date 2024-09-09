@@ -7,7 +7,8 @@ selected=$(echo "$languages\n$core_utils" | fzf)
 read -p "Enter search query: " query
 
 if echo "$languages" | grep -q "$selected"; then
-    tmux split-window -p 40 -h bash -c "curl -s cht.sh/$selected/$(echo $query | tr " " "+") | less"
+    tmux split-window -l 40 -h bash -c "curl -s cht.sh/$selected/$(echo $query | tr " " "+") | less"
 else
-    tmux split-window -p 40 -h bash -c "curl -s cht.sh/$selected~$query | less"
+    tmux split-window -l 40 -h bash -c "curl -s cht.sh/$selected~$query | less"
 fi
+
