@@ -7,3 +7,4 @@ xterm*utf8Title: true
 xterm*boldMode: false
 XTerm*scrollBar:   off
 XTerm*saveLines:   5000
+XTerm*selectToClipboard: true
