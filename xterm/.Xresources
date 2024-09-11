@@ -8,3 +8,8 @@ xterm*boldMode: false
 XTerm*scrollBar:   off
 XTerm*saveLines:   5000
 XTerm*selectToClipboard: true
+
+! Enable copy and paste
+XTerm*vt100.translations: #override \n\
+	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+	Ctrl Shift <Key>V: insert-selection(CLIPBOARD)

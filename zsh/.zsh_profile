@@ -6,6 +6,7 @@ source $PERSONAL/env
 export DOTFILES=$HOME/dotfiles
 
 addToPathFront $HOME/.local/scripts
+addToPathFront $HOME/.cargo/bin
 
 # Where should I put you?
 bindkey -s ^f "tmux-sessionizer\n"
