@@ -3,3 +3,4 @@
 *.swp
 .tmux/plugins/*
 bin/.local/share
+bin/.local/state
