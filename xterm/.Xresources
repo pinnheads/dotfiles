@@ -1,8 +1,46 @@
+! Catppuccin Latte for xterm
+*.foreground:   #4C4F69
+*.background:   #EFF1F5
+*.cursorColor:  #DC8A78
+
+! Black
+*.color0:       #5C5F77
+*.color8:       #6C6F85
+
+! Red
+*.color1:       #D20F39
+*.color9:       #D20F39
+
+! Green
+*.color2:       #40A02B
+*.color10:      #40A02B
+
+! Yellow
+*.color3:       #DF8E1D
+*.color11:      #DF8E1D
+
+! Blue
+*.color4:       #1E66F5
+*.color12:      #1E66F5
+
+! Magenta
+*.color5:       #EA76CB
+*.color13:      #EA76CB
+
+! Cyan
+*.color6:       #179299
+*.color14:      #179299
+
+! White
+*.color7:       #ACB0BE
+*.color15:      #BCC0CC
+
 xterm*utf8: 1
 xterm*faceName: JetBrainsMono Nerd Font:size=12
 xterm*faceNameDoublesize: JetBrainsMono NerdFont:size=10
-xterm*background: black
-xterm*foreground: white
+xterm*termName: xterm-256color
+!xterm*background: black
+!xterm*foreground: white
 xterm*utf8Title: true
 xterm*boldMode: false
 XTerm*scrollBar:   off
