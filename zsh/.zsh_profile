@@ -11,3 +11,4 @@ addToPathFront $HOME/.local/share/bob/nvim-bin
 
 # Where should I put you?
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^t "cht.sh\n"
