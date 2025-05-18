@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+monitor=$(xrandr -q | grep " connected" | fzf | awk '{print $1;}')
+echo "Please enter the brightness between 0.1 to 1"
+read brightness
+
+if (( $(echo "$brightness > 1.0" | bc -l) )); then
+    xrandr --output $monitor --brightness 1.0
+    echo "Value given was greater than 1! Setting brightness to 1.0."
+else
+    xrandr --output $monitor --brightness $brightness
+fi

@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 if [[ -z $STOW_FOLDERS ]]; then
   echo "STOW_FOLDERS is not set"
-  STOW_FOLDERS="bin,uwuntu,zsh,tmux,xterm" # add more folders separated by comma
+  STOW_FOLDERS="bin,uwuntu,zsh,tmux,xterm,nvim" # add more folders separated by comma
 fi
 
 if [[ -z $DOTFILES ]]; then
