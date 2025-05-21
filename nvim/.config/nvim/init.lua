@@ -52,6 +52,17 @@ require("lazy").setup({
         }
     })
     end,
+  },
+
+  -- Markdown Preview
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
   }
 })
 
@@ -74,9 +85,21 @@ vim.diagnostic.config({
     severity_sort = true,
 })
 
+-- Autocmd
+vim.api.nvim_create_autocmd({ "TextChanged", "InsertLeave" }, {
+  pattern = "*",
+  callback = function()
+    if vim.bo.modified and vim.bo.modifiable then
+      vim.cmd("silent! write")
+    end
+  end,
+})
+
 -- KeyBindings
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>")
+vim.keymap.set("n", "<leader>qq", "<cmd>:q<CR>")
+vim.keymap.set("n", "<leader>qw", "<cmd>:wq<CR>")
 
 -- Theme
 vim.cmd.colorscheme("catppuccin-latte")
