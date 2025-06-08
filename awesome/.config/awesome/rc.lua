@@ -14,6 +14,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+-- Widgets library
+local vicious = require("vicious")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -61,6 +63,8 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
+-- Set Custom Font
+beautiful.font = "JetBrainsMono Nerd Font Regular 10"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -232,32 +236,43 @@ awful.screen.connect_for_each_screen(function(s)
 		buttons = taglist_buttons,
 	})
 
+	local battery_widget = wibox.widget.textbox()
+	local net_widget = wibox.widget.textbox()
+
+	vicious.register(
+		net_widget,
+		vicious.widgets.net,
+		" ⬇ ${enx1ee8427c0791 down_kb}KB/s ⬆ ${enx1ee8427c0791 up_kb}KB/s ",
+		2
+	)
+	vicious.register(battery_widget, vicious.widgets.bat, "🔋$2% [$1]", 61, "BAT1")
+
 	-- Create a tasklist widget
-	s.mytasklist = awful.widget.tasklist({
-		screen = s,
-		filter = awful.widget.tasklist.filter.currenttags,
-		buttons = tasklist_buttons,
-	})
+	-- s.mytasklist = awful.widget.tasklist({
+	-- 	screen = s,
+	-- 	filter = awful.widget.tasklist.filter.currenttags,
+	-- 	buttons = tasklist_buttons,
+	-- })
 
 	-- Create the wibox
-	s.mywibox = awful.wibar({ position = "top", screen = s })
+	s.mywibox = awful.wibar({ position = "bottom", screen = s })
 
 	-- Add widgets to the wibox
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
 		{ -- Left widgets
 			layout = wibox.layout.fixed.horizontal,
-			mylauncher,
-			s.mytaglist,
+			s.mylayoutbox,
 			s.mypromptbox,
 		},
-		s.mytasklist, -- Middle widget
+		s.mytaglist, -- Middle widget
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
-			mykeyboardlayout,
-			wibox.widget.systray(),
+			-- mykeyboardlayout,
+			-- wibox.widget.systray(),
+			net_widget,
+			battery_widget,
 			mytextclock,
-			s.mylayoutbox,
 		},
 	})
 end)
