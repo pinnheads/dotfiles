@@ -1,0 +1,43 @@
+/* Tokyo Night Day Theme for Wofi */
+* {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10pt; /* Font size 8 */
+}
+
+window {
+    background-color: #d9e0ee;
+    color: #4c566a;
+    border: 2px solid #c0c0c0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+listview {
+    background-color: #d9e0ee;
+    color: #4c566a;
+    border-radius: 5px;
+}
+
+listview:selected {
+    background-color: #f7768e;
+    color: #ffffff;
+}
+
+entry {
+    background-color: #e5e9f0;
+    color: #4c566a;
+    border-radius: 5px;
+}
+
+entry:selected {
+    background-color: #f7768e;
+    color: #ffffff;
+}
+
+button {
+    background-color: #f0f4fc;
+}
+
+button:hover {
+    background-color: #c0c0c0;
+}
