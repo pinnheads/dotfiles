@@ -6,7 +6,7 @@ fi
 
 if [[ -z $DOTFILES ]]; then
     echo "DOTFILES is not set"
-    DOTFILES=$HOME/dotfiles
+    DOTFILES=$HOME/.dotfiles
 fi
 
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
