@@ -1,5 +1,5 @@
 [general]
-import = ["~/.config/alacritty/tokyonight_day.toml"]
+import = ["~/.config/alacritty/tokyonight_night.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -14,7 +14,7 @@ x = 5
 y = 5
 
 [font]
-size = 12
+size = 11
 
 [font.normal]
 family = "JetBrainsMono Nerd Font"
