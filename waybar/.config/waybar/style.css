@@ -4,6 +4,7 @@
     font-family: JetBrainsMono Nerd Font;
     font-size: 14px;
     min-height: 0;
+	color: #D3C6AA;
 }
 
 window#waybar {
@@ -12,7 +13,7 @@ window#waybar {
 }
 
 #window {
-    background-color: #24283b;
+    background-color: #232A2E;
 	margin: 5px;
 	margin-left: 10px;
     padding: 5px;
@@ -24,7 +25,7 @@ window#waybar.empty #window {
 }
 
 #workspaces {
-	background-color: #24283b;
+	background-color: #232A2E;
 	margin: 5px;
 	margin-left: 10px;
 	border-radius: 5px;
@@ -35,19 +36,19 @@ window#waybar.empty #window {
 }
 
 #workspaces button.focused {
-    color: #24283b;
-    background-color: #7aa2f7;
+    color: #D3C6AA;
+    background-color: #232A2E;
     border-radius: 5px;
 }
 
 #workspaces button:hover {
-	background-color: #7dcfff;
-	color: #24283b;
+	background-color: #232A2E;
+	color: #D3C6AA;
 	border-radius: 5px;
 }
 
 #custom-date, #clock, #battery, #pulseaudio, #network, #idle_inhibitor, #cpu, #memory, #temperature, #backlight, #power-profiles-daemon, #bluetooth {
-	background-color: #24283b;
+	background-color: #232A2E;
 	padding: 5px 10px;
 	margin: 5px 0px;
 	border-radius: 5px;
@@ -58,8 +59,8 @@ window#waybar.empty #window {
 	border-radius: 5px;
 }
 #custom-docker {
-	color: #24283b;
-	background-color: #db4b4b;
+	color: #D3C6AA;
+	background-color: #232A2E;
 	border-radius: 5px;
 	margin-right: 10px;
 	margin-top: 5px;
@@ -69,8 +70,8 @@ window#waybar.empty #window {
 }
 
 #custom-power {
-	color: #24283b;
-	background-color: #db4b4b;
+	color: #D3C6AA;
+	background-color: #543A48;
 	border-radius: 5px;
 	margin-right: 10px;
 	margin-top: 5px;
@@ -86,16 +87,16 @@ window#waybar.empty #window {
 }
 
 #battery {
-    color: #9ece6a;
+    color: #a7c080;
 }
 
 #battery.charging {
-    color: #9ece6a;
+    color: #a7c080;
 }
 
 #battery.warning:not(.charging) {
     background-color: #f7768e;
-    color: #24283b;
+    color: #D3C6AA;
     border-radius: 5px 5px 5px 5px;
 }
 
@@ -104,5 +105,5 @@ window#waybar.empty #window {
 }
 
 #pulseaudio {
-	color: #e0af68;
+    color: #D3C6AA;
 }
