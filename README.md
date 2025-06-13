@@ -42,8 +42,24 @@ repo-template is a `<utility/tool>` that allows `<target_audience>` to `<action>
 
 ### ⚡ Requirements
 
--   foo >= bar
--   bazz
+> Arch
+- networkmanager
+- thunar
+- sassc
+- gnome-themes-extra
+- gnome-tweaks
+- gtk-engine-murrine
+- power-profiles-daemon (enable service through systemctl)
+- fuzzel
+- hyprpaper
+- nvidia-dkms nvidia-utils egl-wayland
+- fastfetch
+- hyprland hyprlock waybar dunst
+- pipewire
+- ripgrep
+- git
+- firefox
+- blueman (enable bluetooth daemon through systemctl)
 
 ### 🚀 Installation
 

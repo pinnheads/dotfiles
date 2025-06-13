@@ -46,7 +46,7 @@ window#waybar.empty #window {
 	border-radius: 5px;
 }
 
-#custom-date, #clock, #battery, #pulseaudio, #network, #idle_inhibitor, #cpu, #memory, #temperature, #backlight, #power-profiles-daemon {
+#custom-date, #clock, #battery, #pulseaudio, #network, #idle_inhibitor, #cpu, #memory, #temperature, #backlight, #power-profiles-daemon, #bluetooth {
 	background-color: #24283b;
 	padding: 5px 10px;
 	margin: 5px 0px;
@@ -56,6 +56,16 @@ window#waybar.empty #window {
 #custom-date {
 	color: #7dcfff;
 	border-radius: 5px;
+}
+#custom-docker {
+	color: #24283b;
+	background-color: #db4b4b;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 5px 10px;
 }
 
 #custom-power {
