@@ -80,7 +80,14 @@ Example:
 
 ## What's Next
 
-Planning to add `<feature/module>`.
+- [ ] De-clutter the waybar module
+    - [ ] If possible group status together like bluetooth wifi | cpu battery disk | time etc
+- [ ] Change tmux theme to everforest
+- [ ] Find more everforest wallpaper and see how to configure wallpaper for auto-switching
+- [ ] Configure lock screen 
+- [ ] GTK theme everforest install
+- [ ] Fuzzel theme for everforest
+- [ ] figure out the clipboard management and emoji situation
 
 ### ✅ To-Do
 
@@ -93,6 +100,7 @@ Planning to add `<feature/module>`.
 ### 🌈 Inspiration
 
 repo-template was inspired by [bare-minimum by @2KAbhishek](https://github.com/2KAbhishek/bare-minimum).
+Themes and Colors - [Everforest Theme](https://github.com/sainnhe/everforest/)
 
 ### 💡 Challenges/Learnings
 

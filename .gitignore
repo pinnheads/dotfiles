@@ -1,6 +1,6 @@
 # Excluded files
 .fonts
 *.swp
-.tmux/plugins/*
+tmux/.tmux/plugins/*
 bin/.local/share
 bin/.local/state
