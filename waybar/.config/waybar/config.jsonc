@@ -8,25 +8,25 @@
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
-        "hyprland/submap"
+        "hyprland/submap",
+        "hyprland/window"
         // "sway/scratchpad"
         // "custom/media"
     ],
     "modules-center": [
-        "hyprland/window"
+        "clock"
     ],
     "modules-right": [
         "idle_inhibitor",
         "pulseaudio",
-        "network",
-        "bluetooth",
         "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
+        "network",
+        "bluetooth",
         "backlight",
         "battery",
-        "clock",
         "tray",
         "custom/docker",
         "custom/power"
@@ -61,12 +61,27 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%H:%M (%Z)}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>\n\n<small>{tz_list}</small>",
+        "timezones": [
+            "Europe/Berlin",
+            "Asia/Kolkata"
+        ],
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false
+        "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
+        "interval": 1,
+        "format-icons": [
+            "<span color='#83c092'>▁</span>", // green
+            "<span color='#7fbbb3'>▂</span>", // blue
+            "<span color='#d3c6aa'>▃</span>", // white
+            "<span color='#d3c6aa'>▄</span>", // white
+            "<span color='#dbbc7f'>▅</span>", // yellow
+            "<span color='#dbbc7f'>▆</span>", // yellow
+            "<span color='#e69875'>▇</span>", // orange
+            "<span color='#e67e80'>█</span>"  // red
+        ]
     },
     "memory": {
         "format": "{}% "
@@ -85,7 +100,9 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon}",
+        "tooltip-format": "Brightness: {percent}%",
+        "scroll-step": 10.0,
         "format-icons": [
             "",
             "",
@@ -100,18 +117,15 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "bat": "BAT1",
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂅",
-        "format-plugged": "{capacity}% ",
+        "interval": 30,
+        "format": "{icon}",
+        "format-charging": "󰂅",
         "format-alt": "{time} {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
+        "tooltip-format": "Health: {health}\nCycles: {cycles}\nPower Draw: {power}\nCharge: {capacity}%",
         "format-icons": [
             "󰁺",
             "󰁼",
@@ -134,9 +148,9 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "on-click": "alacritty -e nmtui", 
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": " ",
         "format-ethernet": "{ipaddr}/{cidr} 󰛳",
-        "tooltip-format": "{ifname} via {gwaddr} 󰛳",
+        "tooltip-format": "{ifname} via {gwaddr} at {ipaddr} 󰛳\nSignal: {signalStrength}%",
         "format-linked": "{ifname} (No IP) 󰛳",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
@@ -144,6 +158,7 @@
     "bluetooth": {
     	"format-on": "",
     	"format-off": "󰂲",
+    	"format-disabled": "󰂲",
     	"format-connected": " {device_alias}",
     	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -157,10 +172,11 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{icon} ",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
+        "tooltip-format": "{volume}% {icon} {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
