@@ -60,6 +60,8 @@ repo-template is a `<utility/tool>` that allows `<target_audience>` to `<action>
 - git
 - firefox
 - blueman (enable bluetooth daemon through systemctl)
+- cliphist
+- grim slurp (screenshots)
 
 ### 🚀 Installation
 
