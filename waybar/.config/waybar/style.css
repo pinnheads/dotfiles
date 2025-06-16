@@ -78,7 +78,7 @@ window#waybar.empty #window {
 }
 
 #custom-docker {
-    color: #D3C6AA;
+    color: #7fbbb3;
     background-color: #232A2E;
     border-radius: 5px;
     margin-right: 10px;
@@ -121,6 +121,18 @@ window#waybar.empty #window {
 
 #network {
     border-radius: 5px;
+}
+
+#network.wifi {
+    color: #83c092
+}
+
+#network.linked {
+    color: #83c092
+}
+
+#network.ethernet {
+    color: #83c092
 }
 
 #pulseaudio {
