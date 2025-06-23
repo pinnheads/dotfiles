@@ -64,6 +64,7 @@ window#waybar.empty #window {
 #memory,
 #temperature,
 #backlight,
+#custom-ddcutil,
 #power-profiles-daemon,
 #bluetooth {
     background-color: #232A2E;

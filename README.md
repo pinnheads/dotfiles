@@ -62,6 +62,7 @@ repo-template is a `<utility/tool>` that allows `<target_audience>` to `<action>
 - blueman (enable bluetooth daemon through systemctl)
 - cliphist
 - grim slurp (screenshots)
+- ddcutil
 
 ### 🚀 Installation
 

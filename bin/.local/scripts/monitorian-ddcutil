@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Choose external monitor (only supported one)
+display_num=1   # From `ddcutil detect`
+i2c_bus=/dev/i2c-10
+
+# Optional: Check if the i2c device is accessible
+if [ ! -r "$i2c_bus" ]; then
+    echo "Error: Cannot access $i2c_bus. Try adding your user to the 'i2c' group and rebooting."
+    exit 1
+fi
+
+echo "Enter brightness level (1 to 100):"
+read brightness
+
+# Validate input
+if ((brightness < 1)); then
+    brightness=1
+    echo "Too low. Setting to 1."
+elif ((brightness > 100)); then
+    brightness=100
+    echo "Too high. Setting to 100."
+fi
+
+# Apply brightness using DDC/CI (VCP code 10)
+ddcutil setvcp 10 "$brightness" --display=$display_num
+

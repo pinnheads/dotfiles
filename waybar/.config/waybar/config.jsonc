@@ -26,6 +26,7 @@
         "network",
         "bluetooth",
         "backlight",
+        "custom/ddcutil",
         "battery",
         "tray",
         "custom/docker",
@@ -170,6 +171,23 @@
         "format": "{}",
         "tooltip": true,
         "on-click": "firefox --url https://homarrr.roarhome.in"
+    },
+    "custom/ddcutil": {
+        "format": "{percentage}% {icon}",
+        "interval": 1,
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "exec": "/home/pinnheads/.config/waybar/scripts/waybar-ddcutil.py",
+        "return-type": "json"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
