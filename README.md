@@ -45,6 +45,7 @@ repo-template is a `<utility/tool>` that allows `<target_audience>` to `<action>
 > Arch
 - networkmanager
 - thunar
+- btop
 - sassc
 - gnome-themes-extra
 - gnome-tweaks
