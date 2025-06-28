@@ -1,48 +1,48 @@
 <div align = "center">
 
-<h1><a href="https://github.com/pinnheads/repo-template">repo-template</a></h1>
+<h1><a href="https://github.com/pinnheads/dotfiles">repo-template</a></h1>
 
-<a href="https://github.com/pinnheads/repo-template/blob/main/LICENSE">
-<img alt="License" src="https://img.shields.io/github/license/pinnheads/repo-template?style=flat&color=eee&label="> </a>
+<a href="https://github.com/pinnheads/dotfiles/blob/main/LICENSE">
+<img alt="License" src="https://img.shields.io/github/license/pinnheads/dotfiles?style=flat&color=eee&label="> </a>
 
-<a href="https://github.com/pinnheads/repo-template/graphs/contributors">
-<img alt="People" src="https://img.shields.io/github/contributors/pinnheads/repo-template?style=flat&color=ffaaf2&label=People"> </a>
+<a href="https://github.com/pinnheads/dotfiles/graphs/contributors">
+<img alt="People" src="https://img.shields.io/github/contributors/pinnheads/dotfiles?style=flat&color=ffaaf2&label=People"> </a>
 
-<a href="https://github.com/pinnheads/repo-template/stargazers">
-<img alt="Stars" src="https://img.shields.io/github/stars/pinnheads/repo-template?style=flat&color=98c379&label=Stars"></a>
+<a href="https://github.com/pinnheads/dotfiles/stargazers">
+<img alt="Stars" src="https://img.shields.io/github/stars/pinnheads/dotfiles?style=flat&color=98c379&label=Stars"></a>
 
-<a href="https://github.com/pinnheads/repo-template/network/members">
-<img alt="Forks" src="https://img.shields.io/github/forks/pinnheads/repo-template?style=flat&color=66a8e0&label=Forks"> </a>
+<a href="https://github.com/pinnheads/dotfiles/network/members">
+<img alt="Forks" src="https://img.shields.io/github/forks/pinnheads/dotfiles?style=flat&color=66a8e0&label=Forks"> </a>
 
-<a href="https://github.com/pinnheads/repo-template/watchers">
-<img alt="Watches" src="https://img.shields.io/github/watchers/pinnheads/repo-template?style=flat&color=f5d08b&label=Watches"> </a>
+<a href="https://github.com/pinnheads/dotfiles/watchers">
+<img alt="Watches" src="https://img.shields.io/github/watchers/pinnheads/dotfiles?style=flat&color=f5d08b&label=Watches"> </a>
 
-<a href="https://github.com/pinnheads/repo-template/pulse">
-<img alt="Last Updated" src="https://img.shields.io/github/last-commit/pinnheads/repo-template?style=flat&color=e06c75&label="> </a>
+<a href="https://github.com/pinnheads/dotfiles/pulse">
+<img alt="Last Updated" src="https://img.shields.io/github/last-commit/pinnheads/dotfiles?style=flat&color=e06c75&label="> </a>
 
-<h3>Short Sweet Headline 🎇🎉</h3>
+<h3>dotfiles for Arch 🎇🎉</h3>
 
 <figure>
-  <img src="images/screenshot.png" alt="repo-template in action">
+  <img src="images/screenshot.png" alt="dotfiles in action">
   <br/>
-  <figcaption>repo-template in action</figcaption>
+  <figcaption>🌲 Everforest Theme for Arch</figcaption>
 </figure>
 
 </div>
 
-repo-template is a `<utility/tool>` that allows `<target_audience>` to `<action>`.
+dotfiles is a set of `personal config files` that allows `me` to `set up my new machine quickly with arch and hyprland`.
 
-## ✨ Features
+## ✨ features
 
--   Supports foo
--   Can do bar
--   Works with bazz
+-   supports foo
+-   can do bar
+-   works with bazz
 
-## Setup
+## setup
 
-### ⚡ Requirements
+### ⚡ requirements
 
-> Arch
+> arch
 - networkmanager
 - thunar
 - btop
@@ -65,51 +65,41 @@ repo-template is a `<utility/tool>` that allows `<target_audience>` to `<action>
 - grim slurp (screenshots)
 - ddcutil
 
-### 🚀 Installation
+### 🚀 installation
 
 ```bash
-git clone https://github.com/pinnheads/repo-template
-cd repo-template
-<install_command>
+git clone https://github.com/pinnheads/dotfiles
+cd dotfiles
+./stow
 ```
 
-### 💻 Usage
+## what's next
 
-```bash
-USAGE:
-    repo-template [FLAGS] [OPTIONS]
-Example:
-    repo-template
-```
+- [x] de-clutter the waybar module
+- [x] change tmux theme to everforest
+- [x] find more everforest wallpaper and see how to configure wallpaper for auto-switching
+- [x] configure lock screen 
+- [x] gtk theme everforest install
+- [x] fuzzel theme for everforest
+- [x] figure out the clipboard management and emoji situation
+- [ ] if possible group status together like bluetooth wifi | cpu battery disk | time etc
+- [ ] add folders related to the theme in stow script
+- [ ] improve the styling of waybar
+- [ ] btop customization
 
-## What's Next
 
-- [ ] De-clutter the waybar module
-    - [ ] If possible group status together like bluetooth wifi | cpu battery disk | time etc
-- [ ] Change tmux theme to everforest
-- [ ] Find more everforest wallpaper and see how to configure wallpaper for auto-switching
-- [ ] Configure lock screen 
-- [ ] GTK theme everforest install
-- [ ] Fuzzel theme for everforest
-- [ ] figure out the clipboard management and emoji situation
+### behind the code
 
-### ✅ To-Do
+### 🌈 inspiration
 
--   [x] Setup repo
--   [ ] Think real hard
--   [ ] Start typing
-
-## Behind The Code
-
-### 🌈 Inspiration
-
-repo-template was inspired by [bare-minimum by @2KAbhishek](https://github.com/2KAbhishek/bare-minimum).
-Themes and Colors - [Everforest Theme](https://github.com/sainnhe/everforest/)
+dotfiles was inspired by [bare-minimum by @2kabhishek](https://github.com/2kabhishek/bare-minimum).
+themes and colors - [Everforest Theme](https://github.com/sainnhe/everforest/)
 
 ### 💡 Challenges/Learnings
 
--   The main challenges were `<issue/difficulty>`
--   I learned about `<learning/accomplishment>`
+-   The main challenges were
+    - Setting up the nvidia drivers correctly
+    - Making GTK theme work
 
 ### 🧰 Tooling
 
@@ -118,7 +108,7 @@ Themes and Colors - [Everforest Theme](https://github.com/sainnhe/everforest/)
 
 ### 🔍 More Info
 
--   [similar](https://github.com/2KAbhishek/bare-minimum) — a related repo
+- [Everforest GTK Theme](https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme)
 
 <hr>
 
@@ -126,7 +116,7 @@ Themes and Colors - [Everforest Theme](https://github.com/sainnhe/everforest/)
 
 <strong>⭐ hit the star button if you found this useful ⭐</strong><br>
 
-<a href="https://github.com/pinnheads/repo-template">Source</a>
+<a href="https://github.com/pinnheads/dotfiles">Source</a>
 | <a href="https://twitter.com/utsavdeep01" target="_blank">Twitter </a>
 | <a href="https://linkedin.com/in/utsavdeep" target="_blank">LinkedIn </a>
 | <a href="https://utsavdeep.com" target="_blank">Portfolio Website </a>
