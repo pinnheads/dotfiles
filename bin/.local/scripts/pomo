@@ -1,0 +1,104 @@
+#!/usr/bin/env bash
+
+# Add this near the top, before parsing other options:
+DAEMON=false
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -d|--daemon)
+      DAEMON=true
+      shift
+      ;;
+    # ... other flags ...
+    *) break ;;
+  esac
+done
+
+if $DAEMON; then
+  # Re‑invoke the script with the same arguments, but in the background:
+  nohup "$0" "$@" >/dev/null 2>&1 &
+  exit 0
+fi
+
+
+# Default values
+WORK_MIN=25
+BREAK_MIN=5
+WORK_URGENCY="normal"
+BREAK_URGENCY="normal"
+
+# Usage message
+usage() {
+  cat <<EOF
+Usage: $0 [OPTIONS]
+
+Options:
+  -t WORK_MIN         Work timer length in minutes (default: $WORK_MIN)
+  -b BREAK_MIN        Break timer length in minutes (default: $BREAK_MIN)
+  -u WORK_URGENCY     Urgency for work notifications: low, normal, or critical (default: $WORK_URGENCY)
+  -k BREAK_URGENCY    Urgency for break notifications: low, normal, or critical (default: $BREAK_URGENCY)
+  -h, --help          Show this help message and exit
+
+Example:
+  pomo -t 45 -b 5 -u normal -k critical
+EOF
+  exit 1
+}
+
+# If no arguments supplied, show usage
+if [[ $# -eq 0 ]]; then
+  usage
+fi
+
+# Parse options
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -t)
+      WORK_MIN=$2
+      shift 2
+      ;;
+    -b)
+      BREAK_MIN=$2
+      shift 2
+      ;;
+    -u)
+      WORK_URGENCY=$2
+      shift 2
+      ;;
+    -k)
+      BREAK_URGENCY=$2
+      shift 2
+      ;;
+    -h|--help)
+      usage
+      ;;
+    *)
+      echo "Unknown option: $1" >&2
+      usage
+      ;;
+  esac
+done
+
+# Validate urgencies
+for level in "$WORK_URGENCY" "$BREAK_URGENCY"; do
+  if [[ ! "$level" =~ ^(low|normal|critical)$ ]]; then
+    echo "Invalid urgency: $level. Must be low, normal, or critical." >&2
+    exit 1
+  fi
+done
+
+# Convert minutes to seconds
+WORK_SEC=$(( WORK_MIN * 60 ))
+BREAK_SEC=$(( BREAK_MIN * 60 ))
+
+# Start work timer
+notify-send -u "$WORK_URGENCY" "Pomodoro" "Work timer started: ${WORK_MIN} minute(s) 🕑"
+sleep "$WORK_SEC"
+notify-send -u "$WORK_URGENCY" "Pomodoro" "Work session complete! Time for a ${BREAK_MIN}‑minute break. ☕️"
+
+# Start break timer
+notify-send -u "$BREAK_URGENCY" "Pomodoro" "Break timer started: ${BREAK_MIN} minute(s) 🍵"
+sleep "$BREAK_SEC"
+notify-send -u "$BREAK_URGENCY" "Pomodoro" "Break over! Back to work. 💪"
+
+exit 0
+
