@@ -1,0 +1,1 @@
+/home/pinnheads/.config/omarchy/current/theme/neovim.lua
