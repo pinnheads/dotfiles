@@ -1,5 +1,5 @@
 {
-  "name": "Gaming-Entertainment",
+  "name": "dev",
   "monitors": [
     {
       "Name": "eDP-1",
@@ -9,7 +9,7 @@
       "Scale": 1.25,
       "X": 2080,
       "Y": 1152,
-      "Active": false,
+      "Active": true,
       "EDIDName": "AU Optronics 0xAF90",
       "Modes": [
         {
@@ -222,6 +222,6 @@
       "DragOffY": 0
     }
   ],
-  "created_at": "2025-10-13T07:19:14.601340721+02:00",
-  "updated_at": "2025-10-13T07:19:14.601341054+02:00"
+  "created_at": "2025-10-14T21:59:14.75512742+02:00",
+  "updated_at": "2025-10-14T21:59:14.755127703+02:00"
 }

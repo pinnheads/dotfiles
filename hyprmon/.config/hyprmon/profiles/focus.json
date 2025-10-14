@@ -1,5 +1,5 @@
 {
-  "name": "Work-Study",
+  "name": "focus",
   "monitors": [
     {
       "Name": "eDP-1",
@@ -9,7 +9,7 @@
       "Scale": 1.25,
       "X": 2080,
       "Y": 1152,
-      "Active": true,
+      "Active": false,
       "EDIDName": "AU Optronics 0xAF90",
       "Modes": [
         {
@@ -222,6 +222,6 @@
       "DragOffY": 0
     }
   ],
-  "created_at": "2025-10-13T07:19:50.285138877+02:00",
-  "updated_at": "2025-10-13T07:19:50.28513916+02:00"
+  "created_at": "2025-10-14T21:59:02.893575342+02:00",
+  "updated_at": "2025-10-14T21:59:02.893575625+02:00"
 }
