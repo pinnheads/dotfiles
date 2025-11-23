@@ -6,7 +6,6 @@ return {
             "html",
             "javascript",
             "json",
-            "jdtls",
             "lua",
             "markdown",
             "markdown_inline",
